@@ -38,7 +38,10 @@ def get_spotify_link(song_title, token):
     except Exception as e:
         return None, str(e)
 
-data = pd.read_csv(r'Z:\projects\musicRecommenderSystem\dataset.csv')
+
+
+url = "https://docs.google.com/spreadsheets/d/1HJSZ0MF7r2xceVIjCtM557V6tSBeNwl6/export?format=csv"
+data = pd.read_csv(url, on_bad_lines='skip')
 data['userRating'] = data['userRating'].apply(lambda x: float(x.split('/')[0]))
 
 label_encoder_genre = LabelEncoder()

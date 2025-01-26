@@ -6,8 +6,8 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 import streamlit as st
 
-client_id = 'clientId'
-client_secret = 'clientSecret'
+client_id = '877c3e1752ee4e98ac1a47ef73921e3f'
+client_secret = '4793b0ab150f4d96b1ce3a5e8c969549'
 
 def get_spotify_access_token():
     auth_url = 'https://accounts.spotify.com/api/token'
